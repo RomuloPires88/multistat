@@ -100,3 +100,14 @@ hca.plot(
 - `Linkage Distances - Hierarchical Cluster Analysis.png`
 
 These images are saved automatically in the current working directory.
+
+### Exemple
+``` bash
+mv.HCA(y).plot(threshold=2)
+```
+![imagem](https://github.com/user-attachments/assets/ea0388d3-8566-4358-8533-3136a830f7bd)
+
+![imagem](https://github.com/user-attachments/assets/aa27a136-fe88-485b-aa70-fdd57cce2d64)
+
+
+
