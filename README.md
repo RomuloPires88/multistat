@@ -111,3 +111,28 @@ mv.HCA(y).plot(threshold=2)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Example
+    -------
+    >>> from multistat import PCA
+    >>> df = pd.read_csv("data.csv")
+    >>> pca = PCA(df, z_score=True, impute="mean")
+    >>> pca.scree()
+    >>> pca.plot(clusters=cluster_labels)
+    >>> pca.biplot(scale_vectors=1.5)
+
