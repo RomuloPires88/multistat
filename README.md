@@ -4,20 +4,22 @@
 
 ## 📌 Overview
 
-This Python class provides a comprehensive and customizable tool for **Hierarchical Cluster Analysis (HCA)** of multivariate data.  
-It includes utilities for data preprocessing (scaling and imputation), clustering, dendrogram visualization, and linkage distance plotting.
+This Python class provides a comprehensive and customizable tool for **Hierarchical Cluster Analysis (HCA)** of multivariate datasets.
+It offers tools for data preprocessing (z-score normalization, missing value imputation), flat cluster extraction, dendrogram generation, and linkage distance analysis.
 
-Designed for experimental and statistical workflows, this module helps interpret relationships and groupings within complex datasets.
+Designed for experimental, analytical, or statistical workflows, this module helps uncover meaningful groupings and relationships within complex datasets.
 
 ---
 
 ## ✨ Features
 
-- 📊 Automatic **data standardization** and **missing value imputation**
+- 🔄 Automatic **data standardization** via z-score normalization
+- 🧱 Flexible missing data imputation strategies (`mean`, `median`, or `constant`)
 - 🔗 Supports a wide range of **linkage methods** and **distance metrics**
-- 🌿 Easily generate and customize **dendrograms**
-- 📈 View clustering step details and **linkage distance evolution**
-- 🧪 Built-in **summary** and **plot** methods for quick insights
+- 🌿 Easily generate and customize **dendrograms** with cluster cut lines
+- 📄 Tabular **summary** of hierarchical clustering steps
+- 🔢 Retrieve **cluster assignments** for use in external workflows (e.g., PCA)
+- 📉 Plot linkage **distance progression** to aid in cluster number estimation
 - ✅ Compatible with `pandas`, `numpy`, `matplotlib`, `scipy`, and `scikit-learn`
 
 ---
@@ -86,3 +88,15 @@ hca.plot(
     orientation='top'
 )
 ```
+### 📎 Notes
+
+- The `threshold` and `criterion` parameters define how clusters are formed from the dendrogram.
+- To specify a fixed number of clusters, use `criterion='maxclust'` and set threshold to the desired number.
+- All results are computed using `scipy.cluster.hierarchy` under the hood.
+
+### 📂 Output Files
+
+- `Dendrogram - Hierarchical Cluster Analysis.png`
+- `Linkage Distances - Hierarchical Cluster Analysis.png`
+
+These images are saved automatically in the current working directory.
