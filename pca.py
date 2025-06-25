@@ -17,11 +17,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-# from scipy.cluster.hierarchy import linkage, fcluster
 from sklearn.decomposition import PCA as SklearnPCA
 from sklearn.preprocessing import StandardScaler
 from IPython.display import display, HTML
-# from .hca import HCA
 
 class PCA:
     """
